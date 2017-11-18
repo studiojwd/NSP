@@ -45,7 +45,7 @@
 					<?php if ( get_row_layout() == 'center_copy' ) : ?>
 			<div class="row" id="center_copy">
 			  <div class="small-12 medium-8 small-centered columns text-center">						<?php the_sub_field( 'copy' ); ?>
-						<a href="<?php the_sub_field( 'button_link' ); ?>" class="<?php the_sub_field( 'add_button' ); ?> button"><?php the_sub_field( 'button_copy' ); ?></a>				
+						<a href="<?php $button_link = get_sub_field( 'button_link' ); ?>" class="<?php the_sub_field( 'add_button' ); ?> button"><?php the_sub_field( 'button_copy' ); ?></a>				
 				</div>
 			</div>
 	
@@ -54,12 +54,15 @@
 			<div class="row" id="link-boxes">
 			<?php if ( have_rows( 'single_box' ) ) : ?>
 				<?php while ( have_rows( 'single_box' ) ) : the_row(); ?>
-					<a href="<?php $link = get_sub_field( 'link' ); ?>" class="singlebox small-12 medium-6 large-4 text-center columns end">
+					<?php $link = get_sub_field( 'link' ); ?>
+					<?php if ( $link ) { ?>
+					<a href="<?php echo $link; ?>" class="singlebox small-12 medium-6 large-4 text-center columns end">
 						<div class="fill"><img src='<?php the_sub_field( "image" ); ?>' /></div>
     				<div class="overlay">
     					<h4><?php the_sub_field( 'copy' ); ?></h4>
     				</div>
 					</a>
+					<?php } ?>
 
 				<?php endwhile; ?>
 			</div>

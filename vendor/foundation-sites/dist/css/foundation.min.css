@@ -4026,7 +4026,7 @@ div#hero {
   left: 0;
   bottom: 0;
   width: 100%;
-  padding-top: 70px;
+  margin-top: 190px;
   color: #fff;
     transition: .6s all;
 }
