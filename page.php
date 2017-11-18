@@ -8,8 +8,8 @@
 
 				<?php if ( get_row_layout() == 'video_background' ) : ?>
 					<div id="hero-section">
-				    <video poster="http://eyday.net/Titas%20Communications%20/Assets/Bakgrund.png" autoplay="true" loop>
-				        <source src="http://localhost/northstreet/wp-content/uploads/2017/11/NSPMovie.mp4.mp4" type="video/mp4">
+				    <video poster="<?php the_sub_field( 'fallback_image' ); ?>" autoplay="true" loop>
+				        <source src="<?php the_sub_field( 'video' ); ?>" type="video/mp4">
 				    </video>
 				    <div class="hero-copy">
 				    	<h1><?php the_sub_field( 'hero_title' ); ?></h1>
@@ -101,7 +101,7 @@
 				<div class="row" id="imageblock">
 				<?php if ( have_rows( 'images_block' ) ) : ?>
 					<?php while ( have_rows( 'images_block' ) ) : the_row(); ?>
-							<a href="<?php the_sub_field( 'single_image_gallery' ); ?>" data-lightbox="complete-set" data-title="Click the right half of the image to move forward."><img src="<?php the_sub_field( 'single_image_gallery' ); ?>" class="<?php the_sub_field( 'images_row' ); ?> columns lightimage end"></a>
+						<a href="<?php the_sub_field( 'single_image_gallery' ); ?>" data-lightbox="complete-set" data-title="Click the right half of the image to move forward."><img src="<?php the_sub_field( 'single_image_gallery' ); ?>" class="<?php the_sub_field( 'images_row' ); ?> columns lightimage end"></a>
 
 
 					<?php endwhile; ?>
