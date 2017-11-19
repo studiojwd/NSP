@@ -4000,7 +4000,7 @@ div#top-bar-menu {
 .display_yes { display: inline-block; }
 
 /* Hero */
-#hero, #link-boxes, #center_copy {
+#hero, #link-boxes, #center_copy, #videoblock  {
 	margin-bottom: 24px;
 }
 #hero h1 {
@@ -4027,7 +4027,7 @@ div#hero {
   width: 100%;
   margin-top: 190px;
   color: #fff;
-    transition: .6s all;
+  transition: .6s all;
 }
 .hero-section {
   background-size: cover;
@@ -4038,19 +4038,19 @@ div#hero {
   display: -ms-flexbox;
   display: flex;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
 }
 .hero-section::before {
-          -webkit-filter: blur(5px);
--moz-filter: blur(5px);
--o-filter: blur(5px);
--ms-filter: blur(5px);
-filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
 .hero-section .hero-section-text {
   color: #fefefe;
@@ -4074,6 +4074,7 @@ filter: blur(5px);
 	padding-right: 2px;
     padding-left: 2px;
 }
+
 .singlebox {
 	position: relative;
 

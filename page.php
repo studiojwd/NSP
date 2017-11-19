@@ -56,7 +56,7 @@
 				<?php while ( have_rows( 'single_box' ) ) : the_row(); ?>
 					<?php $link = get_sub_field( 'link' ); ?>
 					<?php if ( $link ) { ?>
-					<a href="<?php echo $link; ?>" class="singlebox small-12 medium-6 large-4 text-center columns end">
+					<a href="<?php echo $link; ?>" class="singlebox small-6 medium-4 text-center columns end">
 						<div class="fill"><img src='<?php the_sub_field( "image" ); ?>' /></div>
     				<div class="overlay">
     					<h4><?php the_sub_field( 'copy' ); ?></h4>
@@ -75,7 +75,7 @@
 			<div id="link-boxes" class="row">
 
 			<?php 	$mypages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'simple_page_ordering_is_sortable' ) );  	foreach( $mypages as $page ) {		 		$content = $page->post_content; 		if ( ! $content ) // Check for empty page 			continue;  		$content = apply_filters( 'the_content', $content ); 	?>
-					<a href="<?php echo get_page_link( $page->ID ); ?>" class="singlebox small-12 medium-6 large-4 text-center columns end">
+					<a href="<?php echo get_page_link( $page->ID ); ?>" class="singlebox small-6 medium-4 text-center columns end">
 												<div class="fill"><?php echo get_the_post_thumbnail( $page->ID, full ); ?></div>
     				<div class="overlay">
 
@@ -99,6 +99,15 @@
 					</div>
 			</div>
 
+			<?php elseif ( get_row_layout() == 'singlevideo' ) : ?>
+				<div class="row" id="videoblock">
+					<div class="small-12 columns">
+						<video width="100%" controls>
+							<source src="<?php the_sub_field( 'video' ); ?>" type="video/mp4">
+							<p>Issue loading the video, sorry</p>
+						</video>
+					</div>
+				</div>
 
 			<?php elseif ( get_row_layout() == 'flexibileimages' ) : ?>
 				<div class="row" id="imageblock">
