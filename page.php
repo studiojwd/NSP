@@ -42,14 +42,14 @@
 		<?php while ( have_rows( 'module' ) ) : the_row(); ?>
 
 
-					<?php if ( get_row_layout() == 'center_copy' ) : ?>
+			<?php if ( get_row_layout() == 'center_copy' ) : ?>
 			<div class="row" id="center_copy">
 			  <div class="small-12 medium-8 small-centered columns text-center">						<?php the_sub_field( 'copy' ); ?>
 						<a href="<?php $button_link = get_sub_field( 'button_link' ); ?>" class="<?php the_sub_field( 'add_button' ); ?> button"><?php the_sub_field( 'button_copy' ); ?></a>				
 				</div>
 			</div>
 	
-				<?php elseif ( get_row_layout() == 'link_boxes' ) : ?>
+			<?php elseif ( get_row_layout() == 'link_boxes' ) : ?>
 
 			<div class="row" id="link-boxes">
 			<?php if ( have_rows( 'single_box' ) ) : ?>
@@ -70,6 +70,27 @@
 			<?php else : ?>
 				<?php // no rows found ?>
 			<?php endif; ?>
+
+
+			<?php elseif ( get_row_layout() == 'friend_Link' ) : ?>
+			<div id="link-boxes" class="row">
+				<?php if ( have_rows( 'single_box' ) ) : ?>
+					<?php while ( have_rows( 'single_box' ) ) : the_row(); ?>
+					<?php $link = get_sub_field( 'link' ); ?>
+					<?php if ( $link ) { ?>
+					<a href="<?php echo $link; ?>" class="small-12 medium-6 columns end">
+						<img src='<?php the_sub_field( "image" ); ?>'  class="small-12 medium-4 columns" />
+    				<div class="small-12 medium-8 columns">
+    					<p><?php the_sub_field( 'copy' ); ?></p>
+    				</div>
+					</a>
+					<?php } ?>
+					<?php endwhile; ?>
+				<?php else : ?>
+					<?php // no rows found ?>
+				<?php endif; ?>
+			</div>
+
 
 			<?php elseif ( get_row_layout() == 'all_potters' ) : ?>
 			<div id="link-boxes" class="row">
