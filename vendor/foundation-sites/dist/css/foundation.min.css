@@ -4012,7 +4012,6 @@ div#hero {
 div#hero h1.white_background {
     padding-top: 40px;
     padding-bottom: 24px;
-    border-top: 4px solid #4d4d4d;
     margin-top: 8px;
 }
 #hero-section {
@@ -4070,8 +4069,9 @@ div#hero h1.white_background {
   }
 }
 div#inner-footer {
-    border-top: 2px solid #4d4d4d;
+    border-top: 1px solid #4d4d4d;
     padding-top: 24px;
+    margin-top: 32px;
 }
 /* END Hero */
 
