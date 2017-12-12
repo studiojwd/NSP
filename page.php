@@ -26,7 +26,7 @@
 					
 
 				<?php elseif ( get_row_layout() == 'white_background' ) : ?>
-					<h1><?php the_sub_field( 'hero_title' ); ?></h1>
+					<h1 class="white_background"><?php the_sub_field( 'hero_title' ); ?></h1>
 
 				<?php endif; ?>
 
@@ -113,7 +113,9 @@
 			<?php elseif ( get_row_layout() == 'contact' ) : ?>
 			<div class="row">
 					<div class="small-12 small-pull-12 medium-offset-2 medium-4  columns">
-						<?php the_sub_field( 'copy' ); ?>
+						<div class="contact-spacing">
+							<?php the_sub_field( 'copy' ); ?>
+						</div>
 					</div>
 					<div class="small-12 small-push-12 medium-4  columns end">
 						<img src="<?php the_sub_field( 'image' ); ?>" />

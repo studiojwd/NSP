@@ -1326,37 +1326,37 @@ h6 {
     color: #cacaca; }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 2.25rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h3 {
-  font-size: 1.1875rem;
+  font-size: 2.1875rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h4 {
-  font-size: 1.125rem;
+  font-size: 2.125rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h5 {
-  font-size: 1.0625rem;
+  font-size: 2.0625rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
 h6 {
-  font-size: 1rem;
+  font-size: 2rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem; }
@@ -4009,6 +4009,12 @@ div#top-bar-menu {
 div#hero {
     padding-top: 48px;
 }
+div#hero h1.white_background {
+    padding-top: 40px;
+    padding-bottom: 24px;
+    border-top: 4px solid #4d4d4d;
+    margin-top: 8px;
+}
 #hero-section {
     width: 100%;
     max-height: 480px;
@@ -4055,7 +4061,18 @@ div#hero {
   color: #fefefe;
   text-shadow: 1px 1px 2px #0a0a0a;
 }
-
+.contact-spacing {
+  margin-top: 80px;
+}
+@media print, screen and (min-width: 40em) {
+  .contact-spacing {
+    margin-top: 20px;
+  }
+}
+div#inner-footer {
+    border-top: 2px solid #4d4d4d;
+    padding-top: 24px;
+}
 /* END Hero */
 
 /* Quick Links */
