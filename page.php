@@ -81,6 +81,7 @@
 					<a href="<?php echo $link; ?>" class="small-12 medium-6 large-4 columns end" id="friend">
 						<img src='<?php the_sub_field( "image" ); ?>'  class="small-12 columns" />
     				<div class="small-12 columns">
+    					<h3><?php the_sub_field( 'title' ); ?></h3>
     					<p><?php the_sub_field( 'copy' ); ?></p>
     				</div>
 					</a>
