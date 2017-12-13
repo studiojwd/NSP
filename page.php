@@ -73,12 +73,12 @@
 
 
 			<?php elseif ( get_row_layout() == 'friend_Link' ) : ?>
-			<div id="link-boxes" class="row">
+			<div class="row">
 				<?php if ( have_rows( 'single_box' ) ) : ?>
 					<?php while ( have_rows( 'single_box' ) ) : the_row(); ?>
 					<?php $link = get_sub_field( 'link' ); ?>
 					<?php if ( $link ) { ?>
-					<a href="<?php echo $link; ?>" class="small-12 medium-4 columns end" id="friend">
+					<a href="<?php echo $link; ?>" class="small-12 medium-6 large-4 columns end" id="friend">
 						<img src='<?php the_sub_field( "image" ); ?>'  class="small-12 columns" />
     				<div class="small-12 columns">
     					<p><?php the_sub_field( 'copy' ); ?></p>
