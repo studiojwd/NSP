@@ -78,9 +78,9 @@
 					<?php while ( have_rows( 'single_box' ) ) : the_row(); ?>
 					<?php $link = get_sub_field( 'link' ); ?>
 					<?php if ( $link ) { ?>
-					<a href="<?php echo $link; ?>" class="small-12 medium-6 columns end">
-						<img src='<?php the_sub_field( "image" ); ?>'  class="small-12 medium-4 columns" />
-    				<div class="small-12 medium-8 columns">
+					<a href="<?php echo $link; ?>" class="small-12 medium-4 columns end" id="friend">
+						<img src='<?php the_sub_field( "image" ); ?>'  class="small-12 columns" />
+    				<div class="small-12 columns">
     					<p><?php the_sub_field( 'copy' ); ?></p>
     				</div>
 					</a>
