@@ -4073,10 +4073,10 @@ div#inner-footer {
     padding-top: 24px;
     margin-top: 32px;
 }
-a#friend p {
+a#friend p, a#friend h3 {
   color: #0a0a0a;
 }
-a#friend:hover p {
+a#friend:hover p, a#friend:hover h3 {
   color: #0a0a0a;
   text-decoration: underline;
 }
