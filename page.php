@@ -73,7 +73,7 @@
 
 
 			<?php elseif ( get_row_layout() == 'friend_Link' ) : ?>
-			<div class="row">
+			<div class="row"  data-equalizer data-equalize-on="medium">
 				<?php if ( have_rows( 'single_box' ) ) : ?>
 					<?php while ( have_rows( 'single_box' ) ) : the_row(); ?>
 					<?php $link = get_sub_field( 'link' ); ?>
