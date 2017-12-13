@@ -10,7 +10,7 @@
 						</div>
 						<div class="small-12 medium-6 columns text-right">
 							<p class="source-org copyright">Photography by Hannah Mornement. Website by <a href="http://www.studiojwd.com" target="_blank">StudioJWD</a> </p>
-						</div>Hannah Mornement
+						</div>
 					</div> <!-- end #inner-footer -->
 				</footer> <!-- end .footer -->
 			</div>  <!-- end .main-content -->
