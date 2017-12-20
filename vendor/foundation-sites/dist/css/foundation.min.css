@@ -4080,6 +4080,9 @@ a#friend:hover p, a#friend:hover h3 {
   color: #0a0a0a;
   text-decoration: underline;
 }
+a#friend:hover p {
+  text-decoration: none;
+}
 a#friend img {
     margin-bottom: 16px;
 }
