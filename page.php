@@ -71,6 +71,32 @@
 				<?php // no rows found ?>
 			<?php endif; ?>
 
+			<?php elseif ( get_row_layout() == 'video_block' ) : ?>
+
+			<div class="row" id="link-boxes">
+			<?php if ( have_rows( 'single_video' ) ) : ?>
+				<?php while ( have_rows( 'single_video' ) ) : the_row(); ?>
+					<?php $link = get_sub_field( 'link' ); ?>
+					<?php if ( $link ) { ?>
+					<a href="<?php echo $link; ?>" class="singlebox small-6 medium-4 text-center columns end">
+						<div class="fill"><img src='<?php the_sub_field( "image" ); ?>' /></div>
+    				<div class="overlay">
+    					<h4><?php the_sub_field( 'copy' ); ?></h4>
+    				</div>
+					</a>
+					<?php } ?>
+
+				<?php endwhile; ?>
+			</div>
+
+			<?php else : ?>
+				<?php // no rows found ?>
+			<?php endif; ?>
+
+
+			<?php elseif ( get_row_layout() == 'sub_title' ) : ?>
+				<div class="small-12 small-centered columns text-center">						<h3><?php the_sub_field( 'sub_title' ); ?></h3>
+				</div>				
 
 			<?php elseif ( get_row_layout() == 'friend_Link' ) : ?>
 			<div class="row"  data-equalizer data-equalize-on="medium">
