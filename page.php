@@ -56,7 +56,7 @@
 				<?php while ( have_rows( 'single_box' ) ) : the_row(); ?>
 					<?php $link = get_sub_field( 'link' ); ?>
 					<?php if ( $link ) { ?>
-					<a href="<?php echo $link; ?>" class="singlebox small-6 medium-4 text-center columns end">
+					<a href="<?php echo $link; ?>" class="singlebox  small-12 medium-6 large-4 text-center columns end">
 						<div class="fill"><img src='<?php the_sub_field( "image" ); ?>' /></div>
     				<div class="overlay">
     					<h4><?php the_sub_field( 'copy' ); ?></h4>
@@ -82,7 +82,7 @@
 			<div class="row" id="link-boxes">
 				<?php if ( have_rows( 'single_video' ) ) : ?>
 					<?php while ( have_rows( 'single_video' ) ) : the_row(); ?>
-						<a href="//www.youtube.com/watch?v=<?php the_sub_field( "youtubeid" ); ?>" class="singlebox small-6 medium-4 text-center columns end" data-lity>
+						<a href="//www.youtube.com/watch?v=<?php the_sub_field( "youtubeid" ); ?>" class="singlebox small-12 medium-6 large-4 text-center columns end" data-lity>
 							<div class="fill"><img src='http://img.youtube.com/vi/<?php the_sub_field( "youtubeid" ); ?>/0.jpg' /></div>
 							<div class="overlay">
 								<h4>Watch <?php the_sub_field( "video_title" ); ?></h4>
@@ -149,6 +149,9 @@
 					<div class="small-12 small-pull-12 medium-offset-2 medium-4  columns">
 						<div class="contact-spacing">
 							<?php the_sub_field( 'copy' ); ?>
+							<div class="<?php the_sub_field( 'show_news' ); ?>" id="caption">
+								<?php the_sub_field( 'news' ); ?>
+							</div>
 						</div>
 					</div>
 					<div class="small-12 small-push-12 medium-4  columns end">
