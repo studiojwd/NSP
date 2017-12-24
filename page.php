@@ -150,6 +150,7 @@
 						<div class="contact-spacing">
 							<?php the_sub_field( 'copy' ); ?>
 							<div class="<?php the_sub_field( 'show_news' ); ?>" id="caption">
+								<h5>Updates</h5>
 								<?php the_sub_field( 'news' ); ?>
 							</div>
 						</div>
