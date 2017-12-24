@@ -77,7 +77,7 @@
 
 			<!-- Video Blocks -->
 			<?php elseif ( get_row_layout() == 'video_block' ) : ?>
-			<script src="<?php echo get_template_directory_uri(); ?>js/lity.js"></script>
+			<script src="<?php echo get_template_directory_uri(); ?>/js/lity.js"></script>
 
 			<div class="row" id="link-boxes">
 				<?php if ( have_rows( 'single_video' ) ) : ?>
