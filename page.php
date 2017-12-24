@@ -77,51 +77,21 @@
 
 			<!-- Video Blocks -->
 			<?php elseif ( get_row_layout() == 'video_block' ) : ?>
+			<script src="<?php echo get_template_directory_uri(); ?>js/lity.js"></script>
 
 			<div class="row" id="link-boxes">
 				<?php if ( have_rows( 'single_video' ) ) : ?>
 					<?php while ( have_rows( 'single_video' ) ) : the_row(); ?>
-			<div class="fill" id="playme" onclick="revealVideo('video','youtube')" class="singlebox small-6 medium-4 text-center columns end">
-				<img src='http://i1.ytimg.com/vi/<?php the_sub_field( "youtubeid" ); ?>/default.jpg' />
-			</div>
+						<a href="//www.youtube.com/watch?v=<?php the_sub_field( "youtubeid" ); ?>" data-lity="" class="singlebox small-6 medium-4 text-center columns end">
+							<div class="fill"><img src='http://img.youtube.com/vi/<?php the_sub_field( "youtubeid" ); ?>/0.jpg' /></div>
+							<div class="overlay">
+								<h4>Play</h4>
+							</div>
+						</a>
 
-			<div class="overlay">
-				<h4>Play</h4>
-			</div>
 
-			<div id="video" class="lightbox" onclick="hideVideo('video','youtube')">
-			  <div class="lightbox-container">  
-			    <div class="lightbox-content">
-			      
-			      <button onclick="hideVideo('video','youtube')" class="lightbox-close">
-			        Close | ✕
-			      </button>
-			      <div class="video-container">
-			        <iframe id="youtube" width="960" height="540" src="https://www.youtube.com/embed/<?php the_sub_field( "youtubeid" ); ?>?showinfo=0" frameborder="0" allowfullscreen></iframe>
-			      </div>      
-			      
-			    </div>
-			  </div>
-			</div>
 
-			<script type="text/javascript">
-				// Function to reveal lightbox and adding YouTube autoplay
-				function revealVideo(div,video_id) {
-				  var video = document.getElementById(video_id).src;
-				  document.getElementById(video_id).src = video+'&autoplay=1'; // adding autoplay to the URL
-				  document.getElementById(div).style.display = 'block';
-				}
-
-				// Hiding the lightbox and removing YouTube autoplay
-				function hideVideo(div,video_id) {
-				  var video = document.getElementById(video_id).src;
-				  var cleaned = video.replace('&autoplay=1',''); // removing autoplay form url
-				  document.getElementById(video_id).src = cleaned;
-				  document.getElementById(div).style.display = 'none';
-				}
-			</script>
-
-			<?php endwhile; ?>
+				<?php endwhile; ?>
 			</div>
 
 			<?php else : ?>
