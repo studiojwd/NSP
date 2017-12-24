@@ -76,11 +76,11 @@
 
 
 			<!-- Video Blocks -->
-			<?php elseif ( get_row_layout() == 'link_boxes' ) : ?>
+			<?php elseif ( get_row_layout() == 'video_block' ) : ?>
 
 			<div class="row" id="link-boxes">
-				<?php if ( have_rows( 'single_box' ) ) : ?>
-					<?php while ( have_rows( 'single_box' ) ) : the_row(); ?>
+				<?php if ( have_rows( 'single_video' ) ) : ?>
+					<?php while ( have_rows( 'single_video' ) ) : the_row(); ?>
 			<div class="fill" id="playme" onclick="revealVideo('video','youtube')" class="singlebox small-6 medium-4 text-center columns end">
 				<img src='http://i1.ytimg.com/vi/<?php the_sub_field( "youtubeid" ); ?>/default.jpg' />
 			</div>
