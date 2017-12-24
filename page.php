@@ -82,10 +82,10 @@
 			<div class="row" id="link-boxes">
 				<?php if ( have_rows( 'single_video' ) ) : ?>
 					<?php while ( have_rows( 'single_video' ) ) : the_row(); ?>
-						<a href="//www.youtube.com/watch?v=<?php the_sub_field( "youtubeid" ); ?>" data-lity="" class="singlebox small-6 medium-4 text-center columns end">
+						<a href="//www.youtube.com/watch?v=<?php the_sub_field( "youtubeid" ); ?>" class="singlebox small-6 medium-4 text-center columns end" data-lity>
 							<div class="fill"><img src='http://img.youtube.com/vi/<?php the_sub_field( "youtubeid" ); ?>/0.jpg' /></div>
 							<div class="overlay">
-								<h4>Play</h4>
+								<h4>Watch <?php the_sub_field( "video_title" ); ?></h4>
 							</div>
 						</a>
 
@@ -101,7 +101,8 @@
 
 
 			<?php elseif ( get_row_layout() == 'sub_title' ) : ?>
-				<div class="small-12 small-centered columns text-center">						<h3><?php the_sub_field( 'sub_title' ); ?></h3>
+				<div class="small-12 small-centered columns text-center">						
+					<h3><?php the_sub_field( 'sub_title' ); ?></h3>
 				</div>				
 
 			<?php elseif ( get_row_layout() == 'friend_Link' ) : ?>
