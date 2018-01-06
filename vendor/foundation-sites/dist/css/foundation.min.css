@@ -4554,4 +4554,12 @@ body.lb-disable-scrolling {
 .lity-hide {
   display: none;
 }
+@media (max-width: 720px) {
+  div#hero {
+      padding-top: 8px;
+  }
+  #hero-section .hero-copy {
+    top: 90px;
+  }
+}
 
