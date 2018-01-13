@@ -3883,6 +3883,7 @@ a.thumbnail {
 div#top-bar-menu {
     position: fixed;
     width: 100%;
+    z-index: 500;
 }
 @media screen and (max-width: 39.9375em) {
   .hide-for-small-only {
